@@ -18,7 +18,7 @@
     :root {
       --background: #f5f2ef;
       --text: #151515;
-      --gold: #a88655;
+      --gold: #b68d57;
       --footer: #6d6862;
     }
 
@@ -55,7 +55,7 @@
 
     .hero-content {
       width: min(100%, 1000px);
-      transform: translateY(45px);
+      transform: translateY(35px);
     }
 
     h1 {
@@ -71,17 +71,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 22px;
+      gap: 20px;
       width: min(620px, 80%);
-      margin: 38px auto 28px;
+      margin: 36px auto 26px;
       color: var(--gold);
+      opacity: 0.92;
     }
 
     .line {
       position: relative;
       flex: 1;
       height: 1px;
-      background: rgba(168, 134, 85, 0.55);
+      background: rgba(182, 141, 87, 0.55);
     }
 
     .line.left::after,
@@ -104,44 +105,22 @@
       left: -2px;
     }
 
-    .symbol {
-      position: relative;
-      width: 48px;
-      height: 48px;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
+    .alchemy-symbol {
+      width: 42px;
+      height: 42px;
       flex: 0 0 auto;
+      display: block;
     }
 
-    .symbol::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 8px;
-      width: 26px;
-      height: 26px;
-      border-left: 1px solid var(--gold);
-      border-right: 1px solid var(--gold);
-      border-bottom: 1px solid var(--gold);
-      transform: translateX(-50%) rotate(45deg);
-    }
-
-    .symbol::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 9px;
-      width: 1px;
-      height: 29px;
-      background: var(--gold);
-      transform: translateX(-50%);
+    .alchemy-symbol * {
+      vector-effect: non-scaling-stroke;
     }
 
     .subtitle {
       margin: 0;
       color: var(--gold);
-      font-size: clamp(12px, 1.55vw, 20px);
-      letter-spacing: 0.32em;
+      font-size: clamp(10px, 1.15vw, 15px);
+      letter-spacing: 0.28em;
       line-height: 1.8;
       text-transform: uppercase;
     }
@@ -154,7 +133,7 @@
     footer a {
       display: inline-block;
       color: var(--footer);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 0.22em;
       text-decoration: none;
       text-transform: uppercase;
@@ -186,17 +165,18 @@
 
       .ornament {
         width: 88%;
-        gap: 15px;
+        gap: 14px;
         margin-top: 30px;
       }
 
-      .symbol {
-        width: 42px;
-        height: 42px;
+      .alchemy-symbol {
+        width: 38px;
+        height: 38px;
       }
 
       .subtitle {
-        letter-spacing: 0.2em;
+        letter-spacing: 0.18em;
+        line-height: 1.7;
       }
     }
   </style>
@@ -206,17 +186,49 @@
   <main class="page">
     <section class="hero">
       <div class="hero-content">
+
         <h1>Materia Eterea</h1>
 
         <div class="ornament" aria-hidden="true">
           <span class="line left"></span>
-          <span class="symbol"></span>
+
+          <svg
+            class="alchemy-symbol"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <!-- Cerchio esterno -->
+              <circle cx="50" cy="50" r="46"></circle>
+
+              <!-- Triangolo -->
+              <path d="M50 9 L90 80 L10 80 Z"></path>
+
+              <!-- Quadrato -->
+              <rect x="28" y="42" width="44" height="38"></rect>
+
+              <!-- Cerchio interno -->
+              <circle cx="50" cy="61" r="17"></circle>
+
+              <!-- Linea verticale centrale -->
+              <path d="M50 9 L50 80"></path>
+            </g>
+          </svg>
+
           <span class="line right"></span>
         </div>
 
         <p class="subtitle">
           Spiritualità pratica e alchimia interiore
         </p>
+
       </div>
     </section>
 
