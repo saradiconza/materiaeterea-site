@@ -3,31 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Materia Eterea</title>
+  <meta name="description" content="Materia Eterea — Spiritualità pratica e alchimia interiore.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --background: #f5f2ef;
-      --text: #151515;
+      --text: #161513;
       --gold: #a88655;
+      --gold-dark: #8f6f43;
       --footer: #6d6862;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html,
-    body {
+    html, body {
       margin: 0;
       min-height: 100%;
     }
@@ -42,7 +36,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      padding: 30px 24px 22px;
+      padding: 28px 24px 20px;
     }
 
     .hero {
@@ -55,15 +49,15 @@
 
     .hero-content {
       width: min(100%, 900px);
-      transform: translateY(35px);
+      transform: translateY(-22px);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(31px, 4.4vw, 58px);
+      font-size: clamp(29px, 4.2vw, 54px);
       font-weight: 400;
       letter-spacing: 0.12em;
-      line-height: 1.15;
+      line-height: 1.16;
       text-transform: uppercase;
     }
 
@@ -73,7 +67,7 @@
       justify-content: center;
       gap: 18px;
       width: min(540px, 78%);
-      margin: 34px auto 27px;
+      margin: 32px auto 26px;
     }
 
     .line {
@@ -95,13 +89,8 @@
       transform: translateY(-50%);
     }
 
-    .line.left::after {
-      right: -2px;
-    }
-
-    .line.right::before {
-      left: -2px;
-    }
+    .line.left::after { right: -2px; }
+    .line.right::before { left: -2px; }
 
     .logo {
       display: block;
@@ -115,14 +104,48 @@
     .subtitle {
       margin: 0;
       color: var(--gold);
-      font-size: clamp(11px, 1.25vw, 17px);
+      font-size: 13px;
       letter-spacing: 0.28em;
       line-height: 1.8;
       text-transform: uppercase;
     }
 
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 138px;
+      margin-top: 34px;
+      padding: 12px 25px;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--gold-dark);
+      font-family: "Cinzel", serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--background);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
     footer {
-      padding-top: 24px;
+      padding-top: 22px;
       text-align: center;
     }
 
@@ -144,41 +167,48 @@
     footer a:focus-visible {
       color: var(--text);
       border-color: var(--text);
+      outline: none;
     }
 
     @media (max-width: 700px) {
-  .page {
-    padding: 24px 17px 18px;
-  }
+      .page {
+        padding: 22px 17px 17px;
+      }
 
-  .hero-content {
-    transform: none;
-  }
+      .hero-content {
+        transform: translateY(-10px);
+      }
 
-  h1 {
-    font-size: clamp(29px, 9vw, 43px);
-    letter-spacing: 0.08em;
-  }
+      h1 {
+        font-size: clamp(28px, 8.5vw, 41px);
+        letter-spacing: 0.08em;
+      }
 
-  .ornament {
-    width: 88%;
-    gap: 13px;
-    margin-top: 28px;
-  }
+      .ornament {
+        width: 88%;
+        gap: 13px;
+        margin: 28px auto 25px;
+      }
 
-  .logo {
-    width: 35px;
-    height: 35px;
-  }
+      .logo {
+        width: 35px;
+        height: 35px;
+      }
 
-  .subtitle {
-    max-width: 430px;
-    margin-inline: auto;
-    font-size: 15px;
-    letter-spacing: 0.16em;
-    line-height: 1.8;
-  }
-}
+      .subtitle {
+        max-width: 430px;
+        margin-inline: auto;
+        font-size: 15px;
+        letter-spacing: 0.14em;
+        line-height: 1.7;
+      }
+
+      .cta {
+        margin-top: 30px;
+        padding: 12px 24px;
+        font-size: 11px;
+      }
+    }
   </style>
 </head>
 
@@ -203,6 +233,10 @@
         <p class="subtitle">
           Spiritualità pratica e alchimia interiore
         </p>
+
+        <a class="cta" href="https://offerte.materiaeterea.it">
+          Esplora
+        </a>
       </div>
     </section>
 
